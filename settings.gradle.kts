@@ -17,10 +17,8 @@ pluginManagement {
     }
 }
 
-rootProject.name = ("kotlin-android-template")
+rootProject.name = ("digio-interview-test")
 
 include(
-    "app",
-    "library-android",
-    "library-kotlin"
+    "app"
 )

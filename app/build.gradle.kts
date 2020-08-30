@@ -34,13 +34,14 @@ android {
         isWarningsAsErrors = true
         isAbortOnError = true
     }
+
+    sourceSets.all {
+        java.srcDir("src/$name/kotlin")
+    }
 }
 
 dependencies {
     implementation(kotlin("stdlib-jdk7"))
-
-    implementation(project(":library-android"))
-    implementation(project(":library-kotlin"))
 
     implementation(SupportLibs.ANDROIDX_APPCOMPAT)
     implementation(SupportLibs.ANDROIDX_CONSTRAINT_LAYOUT)
