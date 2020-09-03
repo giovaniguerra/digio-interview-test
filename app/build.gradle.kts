@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     kotlin("android")
+    kotlin("plugin.serialization")
     id("kotlin-android-extensions")
 }
 
@@ -19,6 +20,12 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+    buildFeatures {
+        viewBinding = true
     }
     buildTypes {
         getByName("release") {
@@ -46,6 +53,19 @@ dependencies {
     implementation(SupportLibs.ANDROIDX_APPCOMPAT)
     implementation(SupportLibs.ANDROIDX_CONSTRAINT_LAYOUT)
     implementation(SupportLibs.ANDROIDX_CORE_KTX)
+    implementation(SupportLibs.ANDROIDX_LIFECYCLE_KTX)
+    implementation(SupportLibs.ANDROIDX_LIFECYCLE_VIEWMODEL_KTX)
+    implementation(SupportLibs.ANDROIDX_LIFECYCLE_LIVEDATA_KTX)
+    implementation(SupportLibs.ANDROIDX_RECYCLERVIEW)
+
+    implementation(Libs.KOTLINX_COROUTINES)
+    implementation(Libs.KOTLINX_SERIALIZATION)
+    implementation(Libs.KODEIN)
+    implementation(Libs.MATERIAL_DESIGN)
+    implementation(Libs.PICASSO)
+    implementation(Libs.OKHTTP_LOGGING_INTERCEPTOR)
+    implementation(Libs.RETROFIT)
+    implementation(Libs.RETROFIT_KOTLINX_SERIALIZATION_CONVERTER)
 
     testImplementation(TestingLib.JUNIT)
 
