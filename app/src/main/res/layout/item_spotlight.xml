@@ -18,6 +18,7 @@
 
         <ImageView
             android:id="@+id/banner_spotlight_imageview"
+            android:contentDescription="@string/banner_digio_home_content_description"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:src="@tools:sample/backgrounds/scenic"/>

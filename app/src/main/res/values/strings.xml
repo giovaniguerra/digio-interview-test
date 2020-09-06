@@ -1,8 +1,6 @@
 <resources>
     <string name="app_name">Digio Interview</string>
-    <string name="title">This is just a template</string>
-    <string name="description">You can compute a factorial using the library-kotlin module. The result will be also shown in a notification using the library-android module.</string>
-    <string name="factorial_hint">Insert a number to compute his factorial</string>
-    <string name="compute">Compute</string>
-    <string name="notification_title">The Result is:</string>
+    <string name="banner_digio_cash_home_content_description">Banner Digio Cash</string>
+    <string name="product_digio_home_content_description">Produto Digio</string>
+    <string name="banner_digio_home_content_description">Banner Digio</string>
 </resources>

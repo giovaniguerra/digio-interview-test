@@ -76,6 +76,7 @@
                         android:id="@+id/banner_cash_imageview"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:contentDescription="@string/banner_digio_cash_home_content_description"
                         tools:src="@tools:sample/backgrounds/scenic" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
