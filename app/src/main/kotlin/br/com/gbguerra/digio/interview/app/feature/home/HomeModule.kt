@@ -10,7 +10,7 @@ import org.kodein.di.provider
 
 val homeModule = DI.Module("HomeModule") {
     bindViewModel<HomeViewModel>() with provider {
-        HomeViewModel(instance())
+        HomeViewModel(instance(), instance())
     }
 
     bind<ViewModelProvider.Factory>() with provider { DIViewModelFactory(di) }

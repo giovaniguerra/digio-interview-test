@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Digio Interview</string>
     <string name="banner_digio_cash_home_content_description">Banner Digio Cash</string>
-    <string name="product_digio_home_content_description">Produto Digio</string>
     <string name="banner_digio_home_content_description">Banner Digio</string>
+    <string name="product_digio_home_content_description">Produto Digio</string>
+    <string name="product_home_label">Produtos</string>
+    <string name="greetings_home_title">Olá, %1s</string>
 </resources>

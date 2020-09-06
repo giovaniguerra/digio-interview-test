@@ -8,10 +8,11 @@
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/home_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="?attr/actionBarSize"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:title="Olá, Maria" />
+        app:logo="@mipmap/ic_launcher"
+        tools:title="Olá, Maria" />
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -89,12 +90,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_normal"
                 android:layout_marginTop="@dimen/margin_medium"
+                android:text="@string/product_home_label"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
                 android:textColor="@color/blue"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/cash_home_cardview"
-                tools:text="Produtos" />
+                app:layout_constraintTop_toBottomOf="@id/cash_home_cardview" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/product_home_recyclerview"

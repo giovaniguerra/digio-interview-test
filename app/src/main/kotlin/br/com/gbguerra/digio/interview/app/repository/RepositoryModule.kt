@@ -7,4 +7,5 @@ import org.kodein.di.singleton
 
 val repositoryModule = DI.Module("RepositoryModule") {
     bind<ProductRepository>() with singleton { ProductRepository(instance()) }
+    bind<UserRepository>() with singleton { UserRepository()}
 }

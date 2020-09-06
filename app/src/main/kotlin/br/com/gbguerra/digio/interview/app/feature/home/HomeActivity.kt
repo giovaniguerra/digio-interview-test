@@ -35,6 +35,7 @@ class HomeActivity : AbstractActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        setSupportActionBar(binding.homeToolbar)
 
         setupRecyclerViews()
         setupObservers()
@@ -64,13 +65,18 @@ class HomeActivity : AbstractActivity() {
 
     private fun observeHomeUiModel(): (t: HomeUiModel) -> Unit {
         return {
+            title = createGreetings(it.userName)
             spotlightAdapter.spotlights = it.spotlights.toMutableList()
             binding.cashHomeTitle.text = createCashHomeTitle(it.cash.title)
             binding.bannerCashImageview.loadImage(it.cash.imageUrl)
-            binding.productHomeTitle.text = it.productLabel
             productAdapter.products = it.products.toMutableList()
         }
     }
+
+    private fun createGreetings(userName: String): String {
+        return getString(R.string.greetings_home_title, userName)
+    }
+
     private fun createCashHomeTitle(title: String): Spannable {
         val (part1, part2) = title.split(" ")
         val blueColor = ContextCompat.getColor(this, R.color.blue)
