@@ -2,7 +2,7 @@ package br.com.gbguerra.digio.interview.app.feature.home
 
 import androidx.lifecycle.ViewModelProvider
 import br.com.gbguerra.digio.interview.app.core.di.DIViewModelFactory
-import br.com.gbguerra.digio.interview.app.extension.bindViewModel
+import br.com.gbguerra.digio.interview.app.extension.di.bindViewModel
 import org.kodein.di.DI
 import org.kodein.di.bind
 import org.kodein.di.instance

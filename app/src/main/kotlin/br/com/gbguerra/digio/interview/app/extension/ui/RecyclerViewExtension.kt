@@ -1,4 +1,4 @@
-package br.com.gbguerra.digio.interview.app.extension
+package br.com.gbguerra.digio.interview.app.extension.ui
 
 import androidx.recyclerview.widget.RecyclerView
 

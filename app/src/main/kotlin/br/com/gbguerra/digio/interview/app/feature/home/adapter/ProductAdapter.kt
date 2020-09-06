@@ -1,10 +1,10 @@
-package br.com.gbguerra.digio.interview.app.feature.home
+package br.com.gbguerra.digio.interview.app.feature.home.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import br.com.gbguerra.digio.interview.app.databinding.ItemProductBinding
-import br.com.gbguerra.digio.interview.app.extension.loadImage
+import br.com.gbguerra.digio.interview.app.extension.ui.loadImage
 import br.com.gbguerra.digio.interview.app.feature.home.uimodel.ProductUiModel
 
 class ProductAdapter : RecyclerView.Adapter<ProductAdapter.ViewHolder>() {

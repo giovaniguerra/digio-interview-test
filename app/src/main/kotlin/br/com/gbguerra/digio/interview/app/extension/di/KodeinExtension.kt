@@ -1,4 +1,4 @@
-package br.com.gbguerra.digio.interview.app.extension
+package br.com.gbguerra.digio.interview.app.extension.di
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity

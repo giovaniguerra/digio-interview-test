@@ -1,4 +1,4 @@
-package br.com.gbguerra.digio.interview.app.extension
+package br.com.gbguerra.digio.interview.app.extension.ui
 
 import android.widget.ImageView
 import com.squareup.picasso.Picasso

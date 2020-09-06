@@ -11,9 +11,13 @@ import androidx.recyclerview.widget.RecyclerView
 import br.com.gbguerra.digio.interview.app.R
 import br.com.gbguerra.digio.interview.app.core.ui.AbstractActivity
 import br.com.gbguerra.digio.interview.app.databinding.ActivityHomeBinding
-import br.com.gbguerra.digio.interview.app.extension.loadImage
-import br.com.gbguerra.digio.interview.app.extension.setColorSpan
-import br.com.gbguerra.digio.interview.app.extension.viewModel
+import br.com.gbguerra.digio.interview.app.extension.ui.loadImage
+import br.com.gbguerra.digio.interview.app.extension.ui.setColorSpan
+import br.com.gbguerra.digio.interview.app.extension.di.viewModel
+import br.com.gbguerra.digio.interview.app.feature.home.adapter.ProductAdapter
+import br.com.gbguerra.digio.interview.app.feature.home.adapter.ProductItemDecoration
+import br.com.gbguerra.digio.interview.app.feature.home.adapter.SpotlightAdapter
+import br.com.gbguerra.digio.interview.app.feature.home.adapter.SpotlightItemDecoration
 import br.com.gbguerra.digio.interview.app.feature.home.uimodel.HomeUiModel
 import org.kodein.di.DI
 import org.kodein.di.android.di
