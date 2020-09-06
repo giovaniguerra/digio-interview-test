@@ -10,5 +10,4 @@ class UserRepository {
     companion object {
         private const val FAKE_USER_NAME = "Maria"
     }
-
 }
