@@ -1,12 +1,18 @@
 package br.com.gbguerra.digio.interview.app.feature.home
 
 import android.os.Bundle
+import android.text.Spannable
+import android.text.SpannableStringBuilder
+import androidx.core.content.ContextCompat
+import androidx.core.text.toSpannable
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
+import br.com.gbguerra.digio.interview.app.R
 import br.com.gbguerra.digio.interview.app.core.ui.AbstractActivity
 import br.com.gbguerra.digio.interview.app.databinding.ActivityHomeBinding
 import br.com.gbguerra.digio.interview.app.extension.loadImage
+import br.com.gbguerra.digio.interview.app.extension.setColorSpan
 import br.com.gbguerra.digio.interview.app.extension.viewModel
 import br.com.gbguerra.digio.interview.app.feature.home.uimodel.HomeUiModel
 import org.kodein.di.DI
@@ -59,10 +65,21 @@ class HomeActivity : AbstractActivity() {
     private fun observeHomeUiModel(): (t: HomeUiModel) -> Unit {
         return {
             spotlightAdapter.spotlights = it.spotlights.toMutableList()
-            binding.cashHomeTitle.text = it.cash.title
+            binding.cashHomeTitle.text = createCashHomeTitle(it.cash.title)
             binding.bannerCashImageview.loadImage(it.cash.imageUrl)
             binding.productHomeTitle.text = it.productLabel
             productAdapter.products = it.products.toMutableList()
         }
+    }
+    private fun createCashHomeTitle(title: String): Spannable {
+        val (part1, part2) = title.split(" ")
+        val blueColor = ContextCompat.getColor(this, R.color.blue)
+        val grayColor = ContextCompat.getColor(this, R.color.gray)
+
+        return SpannableStringBuilder().apply {
+            append(part1.setColorSpan(blueColor))
+            append(" ")
+            append(part2.setColorSpan(grayColor))
+        }.toSpannable()
     }
 }
